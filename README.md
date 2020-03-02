@@ -42,6 +42,7 @@ POST /cards
 ### Todos
 
  - Add automated testing
+ - Add frontend content
  
 ### License
 
