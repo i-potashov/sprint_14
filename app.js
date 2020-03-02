@@ -5,6 +5,8 @@ const { errors } = require('celebrate');
 const routes = require('./routes');
 const { DB, PORT } = require('./configuration/config');
 const { errorHandler } = require('./middlewares/errorHandler');
+const { login, createUser } = require('./controllers/users');
+const auth = require('./middlewares/auth');
 
 const app = express();
 app.use(bodyParser.json());
@@ -14,12 +16,10 @@ mongoose.connect(DB, {
   useCreateIndex: true,
   useFindAndModify: false,
 });
-app.use((req, res, next) => {
-  req.user = {
-    _id: '5e4ee316ed85393ad6a80cb9',
-  };
-  next();
-});
+
+app.post('/signin', login);
+app.post('/signup', createUser);
+app.use(auth);
 app.use(routes);
 // Обработчик ошибок celebrate
 app.use(errors());
