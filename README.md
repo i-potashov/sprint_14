@@ -1,6 +1,6 @@
 # Project №14 "Yandex_praktikum"
 **v 0.0.2**
-Configuring the server in a Node.js express.js & MongoDB and and implement authentication and authorization
+Configuring the server in a Node.js express.js & MongoDB and and implement authentication and authorization with cookies
 
 **Modules:**
 ```sh
