@@ -5,6 +5,7 @@ const INVALID_EMAIL = 'Неверный формат почты';
 const BAD_REQUEST = 'Некорректный запрос';
 const SERVER_ERROR = 'На сервере произошла ошибка';
 const INVALID_AUTHORIZATION = 'Необходима авторизация';
+const ACCESS_DENIED = 'Доступ отклонен';
 
 module.exports = {
   NOT_FOUND,
@@ -14,4 +15,5 @@ module.exports = {
   BAD_REQUEST,
   SERVER_ERROR,
   INVALID_AUTHORIZATION,
+  ACCESS_DENIED,
 };
