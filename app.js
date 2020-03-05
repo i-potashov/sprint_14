@@ -1,5 +1,3 @@
-// TO DO в модули селебрате добавить ошибки на логин и регу
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
