@@ -3,7 +3,7 @@ Joi.objectId = require('joi-objectid')(Joi);
 
 const loginRequestCheck = celebrate({
   body: Joi.object().keys({
-    email: Joi.string().required(),
+    email: Joi.string().required().email(),
     password: Joi.string().required().min(8),
   }),
 });
@@ -13,7 +13,7 @@ const userRequestCheck = celebrate({
     name: Joi.string().required().min(2).max(30),
     about: Joi.string().required().min(2).max(30),
     avatar: Joi.string().required().uri(),
-    email: Joi.string().required(),
+    email: Joi.string().required().email(),
     password: Joi.string().required().min(8),
   }),
 });
@@ -28,4 +28,18 @@ const cardRequestCheck = celebrate({
   }),
 });
 
-module.exports = { loginRequestCheck, userRequestCheck, cardRequestCheck };
+const idRequestCheck = celebrate({
+  params: Joi.object().keys({
+    userId: Joi.objectId().required(),
+  }),
+});
+
+const idCardRequestCheck = celebrate({
+  params: Joi.object().keys({
+    cardId: Joi.objectId().required(),
+  }),
+});
+
+module.exports = {
+  loginRequestCheck, userRequestCheck, cardRequestCheck, idRequestCheck, idCardRequestCheck,
+};

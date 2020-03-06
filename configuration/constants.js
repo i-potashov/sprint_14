@@ -6,6 +6,7 @@ const BAD_REQUEST = 'Некорректный запрос';
 const SERVER_ERROR = 'На сервере произошла ошибка';
 const INVALID_AUTHORIZATION = 'Необходима авторизация';
 const ACCESS_DENIED = 'Доступ отклонен';
+const USER_NOT_FOUND = 'Пользователь не найден';
 
 module.exports = {
   NOT_FOUND,
@@ -16,4 +17,5 @@ module.exports = {
   SERVER_ERROR,
   INVALID_AUTHORIZATION,
   ACCESS_DENIED,
+  USER_NOT_FOUND,
 };

@@ -1,11 +1,12 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-const { SERVER_ERROR } = require('../configuration/constants');
+const { SERVER_ERROR, USER_NOT_FOUND } = require('../configuration/constants');
 const { JWT_KEY } = require('../configuration/config');
 
 module.exports.getUser = (req, res, next) => {
   User.findById(req.params.userId)
+    .orFail(() => res.status(404).send({ message: USER_NOT_FOUND }))
     .then((user) => res.status(200).send({ data: user }))
     .catch(next);
 };
