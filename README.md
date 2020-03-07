@@ -1,12 +1,12 @@
 # Project №14 "Yandex_praktikum"
-**v 0.0.1**
-Configuring the server in a Node.js express.js & MongoDB and and implement authentication and authorization
+**v 0.0.2**
+Configuring the server in a Node.js express.js & MongoDB and and implement authentication and authorization with cookies
 
 **Modules:**
 ```sh
 "body-parser", "celebrate", "express", "joi-objectid", 
 "mongoose", "validator", "eslint", "eslint-config-airbnb-base", 
-"eslint-plugin-import", "nodemon"
+"eslint-plugin-import", "nodemon", "jsonwebtoken", "mongoose-unique-validator", "cookie-parser"
 ```
 ### Getting started
 
@@ -33,16 +33,18 @@ $ npm run eslintfix
 **After starting the server, you can try these queries:**
 
 ```sh
+POST /signin
+POST /signup
+POST /clearcookie
 GET /users
 GET /users/:userId
-POST /users
 GET /cards
 POST /cards
 ```
 ### Todos
 
  - Add automated testing
- - Add frontend content
+ - Fix custom errors
  
 ### License
 

@@ -1,0 +1,40 @@
+{
+  "name": "sprint_14",
+  "version": "0.0.2",
+  "description": "Training project - sprint_14 Configuring the server and implement authentication and authorization",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "eslint": "eslint .",
+    "eslintfix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-potashov/sprint_14.git"
+  },
+  "author": "I.Potashov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/i-potashov/sprint_14/issues"
+  },
+  "homepage": "https://github.com/i-potashov/sprint_14#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "celebrate": "^11.0.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "joi-objectid": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.1",
+    "mongoose-unique-validator": "^2.0.3",
+    "validator": "^12.2.0"
+  }
+}
